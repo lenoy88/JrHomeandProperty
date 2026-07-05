@@ -15,13 +15,23 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #111;
       color: white;
       line-height: 1.6;
+
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.65)
+        ),
+        url("background.jpg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     header {
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.88);
       border-bottom: 4px solid gold;
       text-align: center;
       padding: 25px 15px;
@@ -106,7 +116,7 @@
     .hero {
       text-align: center;
       padding: 45px 20px;
-      background: linear-gradient(to bottom, #1a1a1a, #333);
+      background-color: rgba(0, 0, 0, 0.62);
     }
 
     .guy-pic {
@@ -128,10 +138,11 @@
       max-width: 750px;
       margin: auto;
       font-size: 18px;
+      font-weight: bold;
     }
 
     .services {
-      background-color: #222;
+      background-color: rgba(0, 0, 0, 0.72);
       padding: 45px 20px;
       text-align: center;
     }
@@ -151,7 +162,7 @@
     }
 
     .box {
-      background-color: #111;
+      background-color: rgba(17, 17, 17, 0.90);
       border: 2px solid gold;
       border-radius: 12px;
       padding: 20px;
@@ -165,10 +176,11 @@
 
     .box p {
       font-size: 16px;
+      font-weight: bold;
     }
 
     .about {
-      background-color: #111;
+      background-color: rgba(0, 0, 0, 0.68);
       padding: 45px 20px;
       text-align: center;
     }
@@ -183,10 +195,11 @@
       max-width: 850px;
       margin: auto;
       font-size: 18px;
+      font-weight: bold;
     }
 
     .house-section {
-      background-color: #222;
+      background-color: rgba(0, 0, 0, 0.72);
       padding: 45px 20px;
       text-align: center;
     }
@@ -205,7 +218,7 @@
     }
 
     .contact {
-      background-color: #111;
+      background-color: rgba(0, 0, 0, 0.80);
       padding: 45px 20px;
       text-align: center;
     }
@@ -219,6 +232,7 @@
     .contact p {
       font-size: 18px;
       margin-bottom: 10px;
+      font-weight: bold;
     }
 
     .contact a {
@@ -243,14 +257,20 @@
     }
 
     footer {
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.90);
       color: gold;
       text-align: center;
       padding: 18px;
       border-top: 4px solid gold;
+      font-weight: bold;
     }
 
     @media (max-width: 700px) {
+      body {
+        background-attachment: scroll;
+        background-position: center top;
+      }
+
       header {
         padding-top: 75px;
       }

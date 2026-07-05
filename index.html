@@ -76,7 +76,6 @@
     }
 
     .dropdown-content a {
-      color: white;
       padding: 14px 18px;
       text-decoration: none;
       display: block;
@@ -84,6 +83,11 @@
       font-weight: bold;
       border-bottom: 1px solid #777;
       text-align: center;
+
+      background: linear-gradient(to right, red, white, blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .dropdown-content a:last-child {
@@ -92,7 +96,7 @@
 
     .dropdown-content a:hover {
       background-color: #333;
-      color: gold;
+      transform: scale(1.05);
     }
 
     .dropdown:hover .dropdown-content {

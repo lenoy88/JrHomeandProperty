@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>JRHomeandProperty</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: black;
+      border-bottom: 4px solid gold;
+      text-align: center;
+      padding: 25px 15px;
+      position: relative;
+    }
+
+    .site-title {
+      color: gold;
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background-color: gold;
+      color: black;
+      padding: 12px 18px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      min-width: 230px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 15px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: gold;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 45px 20px;
+      background: linear-gradient(to bottom, #1a1a1a, #333);
+    }
+
+    .guy-pic {
+      width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid gold;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      color: gold;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .services {
+      background-color: #222;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    .services h2 {
+      color: gold;
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .service-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .box {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .box h3 {
+      color: gold;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .box p {
+      font-size: 16px;
+    }
+
+    .about {
+      background-color: #111;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: gold;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .house-section {
+      background-color: #222;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    .house-section h2 {
+      color: gold;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .house-pic {
+      width: 650px;
+      max-width: 95%;
+      border-radius: 15px;
+      border: 4px solid gold;
+    }
+
+    .contact {
+      background-color: #111;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: gold;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: gold;
+      font-weight: bold;
+    }
+
+    .call-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 25px;
+      background-color: gold;
+      color: black !important;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .call-btn:hover {
+      background-color: #d4af37;
+    }
+
+    footer {
+      background-color: black;
+      color: gold;
+      text-align: center;
+      padding: 18px;
+      border-top: 4px solid gold;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding-top: 75px;
+      }
+
+      nav {
+        top: 15px;
+        right: 15px;
+      }
+
+      .site-title {
+        font-size: 30px;
+      }
+
+      .hero h2 {
+        font-size: 26px;
+      }
+
+      .guy-pic {
+        width: 180px;
+        height: 180px;
+      }
+
+      .dropdown-content {
+        min-width: 210px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="dropdown">
+        <button class="dropbtn">Services ☰</button>
+
+        <div class="dropdown-content">
+          <a href="#lawn">Lawn Care</a>
+          <a href="#painting">Painting</a>
+          <a href="#cleaning">Cleaning</a>
+          <a href="#repairs">Home Repairs</a>
+          <a href="#moving">Moving Help</a>
+          <a href="#maintenance">Property Maintenance</a>
+          <a href="#pressure">Pressure Washing</a>
+          <a href="#yard">Yard Cleanup</a>
+          <a href="#furniture">Furniture Assembly</a>
+          <a href="#hauling">Trash Removal</a>
+        </div>
+      </div>
+    </nav>
+
+    <h1 class="site-title">JRHomeandProperty</h1>
+  </header>
+
+  <section class="hero">
+    <img src="guy.jpg" alt="JR Home and Property owner" class="guy-pic">
+
+    <h2>Reliable Home & Property Services</h2>
+
+    <p>
+      JRHomeandProperty helps customers keep their homes, yards, and properties
+      clean, safe, and looking good. We provide dependable service with care,
+      respect, and hard work.
+    </p>
+  </section>
+
+  <section class="services">
+    <h2>Our Services</h2>
+
+    <div class="service-boxes">
+
+      <div class="box" id="lawn">
+        <h3>Lawn Care</h3>
+        <p>Grass cutting, trimming, edging, and basic yard care.</p>
+      </div>
+
+      <div class="box" id="painting">
+        <h3>Painting</h3>
+        <p>Interior and exterior painting for homes and properties.</p>
+      </div>
+
+      <div class="box" id="cleaning">
+        <h3>Cleaning</h3>
+        <p>General cleaning for homes, rentals, and property spaces.</p>
+      </div>
+
+      <div class="box" id="repairs">
+        <h3>Home Repairs</h3>
+        <p>Small repairs and basic handyman work around the house.</p>
+      </div>
+
+      <div class="box" id="moving">
+        <h3>Moving Help</h3>
+        <p>Help moving furniture, boxes, and household items.</p>
+      </div>
+
+      <div class="box" id="maintenance">
+        <h3>Property Maintenance</h3>
+        <p>Routine upkeep to help keep your property in good shape.</p>
+      </div>
+
+      <div class="box" id="pressure">
+        <h3>Pressure Washing</h3>
+        <p>Driveways, sidewalks, patios, siding, and outdoor areas.</p>
+      </div>
+
+      <div class="box" id="yard">
+        <h3>Yard Cleanup</h3>
+        <p>Leaf removal, branch cleanup, and outdoor cleanup.</p>
+      </div>
+
+      <div class="box" id="furniture">
+        <h3>Furniture Assembly</h3>
+        <p>Help putting together shelves, stands, tables, and furniture.</p>
+      </div>
+
+      <div class="box" id="hauling">
+        <h3>Trash Removal</h3>
+        <p>Help removing unwanted items, junk, and small trash loads.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>Why Choose JRHomeandProperty?</h2>
+
+    <p>
+      We make it easy for customers to find the service they need. Whether you
+      need lawn care, cleaning, repairs, painting, moving help, or property
+      maintenance, JRHomeandProperty is ready to help.
+    </p>
+  </section>
+
+  <section class="house-section">
+    <h2>We Care For Your Home Like It Is Our Own</h2>
+
+    <img src="house.jpg" alt="Beautiful home property" class="house-pic">
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact JRHomeandProperty</h2>
+
+    <p>Need help with your home or property?</p>
+    <p>Call, text, or email us for service information.</p>
+
+    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+
+    <a href="tel:7570000000" class="call-btn">Call Now</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 JRHomeandProperty. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

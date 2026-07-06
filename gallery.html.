@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | JRHomeandProperty</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, navy, #1c1c1c);
+      color: silver;
+      text-align: center;
+    }
+
+    header {
+      background: #001f3f;
+      padding: 25px;
+      border-bottom: 4px solid silver;
+    }
+
+    h1 {
+      color: silver;
+      font-size: 40px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: silver;
+      color: navy;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 25px 20px 5px;
+      color: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 3px solid silver;
+      border-radius: 15px;
+      padding: 15px;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid silver;
+    }
+
+    .gallery-card h2 {
+      color: white;
+      margin-top: 12px;
+      font-size: 24px;
+    }
+
+    .gallery-card p {
+      color: silver;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>JRHomeandProperty Gallery</h1>
+    <a href="index.html" class="back-btn">Back Home</a>
+  </header>
+
+  <p class="intro">
+    View examples of JRHomeandProperty yard care, cleanup, lawn work,
+    and property service photos.
+  </p>
+
+  <section class="gallery-grid">
+
+    <div class="gallery-card">
+      <img src="yard1.jpg" alt="Yard service photo 1">
+      <h2>Yard 1</h2>
+      <p>Yard cleanup and outdoor property service.</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="yard2.jpg" alt="Yard service photo 2">
+      <h2>Yard 2</h2>
+      <p>Grass care, trimming, and property cleanup.</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="yard3.jpg" alt="Yard service photo 3">
+      <h2>Yard 3</h2>
+      <p>Outdoor cleanup and yard improvement work.</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="yard4.jpg" alt="Yard service photo 4">
+      <h2>Yard 4</h2>
+      <p>Property care and outdoor maintenance.</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="yard5.jpg" alt="Yard service photo 5">
+      <h2>Yard 5</h2>
+      <p>Clean yard space and maintained property area.</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="yard6.jpg" alt="Yard service photo 6">
+      <h2>Yard 6</h2>
+      <p>Yard work, cleanup, and property service.</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="yard7.jpg" alt="Yard service photo 7">
+      <h2>Yard 7</h2>
+      <p>Finished yard cleanup and outdoor improvement.</p>
+    </div>
+
+  </section>
+
+</body>
+</html>

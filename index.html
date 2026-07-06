@@ -183,6 +183,9 @@
       border: 2px solid gold;
       border-radius: 12px;
       padding: 20px;
+      color: white;
+      text-decoration: none;
+      display: block;
     }
 
     .box h3 {
@@ -194,6 +197,11 @@
     .box p {
       font-size: 16px;
       font-weight: bold;
+    }
+
+    .box:hover {
+      background-color: rgba(40, 40, 40, 0.95);
+      transform: scale(1.03);
     }
 
     .gallery {
@@ -366,12 +374,12 @@
         <button class="dropbtn">Services ☰</button>
 
         <div class="dropdown-content">
-          <a href="#lawn">Lawn Care</a>
-          <a href="#repairs">Home Repairs</a>
-          <a href="#maintenance">Property Maintenance</a>
-          <a href="#pressure">Pressure Washing</a>
-          <a href="#yard">Yard Cleanup</a>
-          <a href="#gallery">Gallery</a>
+          <a href="lawncare.html">Lawn Care</a>
+          <a href="homerepair.html">Home Repairs</a>
+          <a href="maintenance.html">Property Maintenance</a>
+          <a href="pressurewashing.html">Pressure Washing</a>
+          <a href="yardcleanup.html">Yard Cleanup</a>
+          <a href="gallery.html">Gallery</a>
         </div>
       </div>
     </nav>
@@ -396,35 +404,35 @@
 
     <div class="service-boxes">
 
-      <div class="box" id="lawn">
+      <a class="box" href="lawncare.html">
         <h3>Lawn Care</h3>
         <p>Grass cutting, trimming, edging, and basic yard care.</p>
-      </div>
+      </a>
 
-      <div class="box" id="repairs">
+      <a class="box" href="homerepair.html">
         <h3>Home Repairs</h3>
         <p>Small repairs and basic handyman work around the house.</p>
-      </div>
+      </a>
 
-      <div class="box" id="maintenance">
+      <a class="box" href="maintenance.html">
         <h3>Property Maintenance</h3>
         <p>Routine upkeep to help keep your property in good shape.</p>
-      </div>
+      </a>
 
-      <div class="box" id="pressure">
+      <a class="box" href="pressurewashing.html">
         <h3>Pressure Washing</h3>
         <p>Driveways, sidewalks, patios, siding, and outdoor areas.</p>
-      </div>
+      </a>
 
-      <div class="box" id="yard">
+      <a class="box" href="yardcleanup.html">
         <h3>Yard Cleanup</h3>
         <p>Leaf removal, branch cleanup, and outdoor cleanup.</p>
-      </div>
+      </a>
 
-      <div class="box" id="gallery">
+      <a class="box" href="gallery.html">
         <h3>Gallery</h3>
         <p>View photos of completed home and property service work.</p>
-      </div>
+      </a>
 
     </div>
   </section>
@@ -432,8 +440,8 @@
   <section class="gallery">
     <h2>Gallery</h2>
     <p>
-      This section can be used to show before-and-after photos, completed jobs,
-      lawn care work, pressure washing, home repairs, and property maintenance.
+      Click the Gallery button to view photos of completed jobs, lawn care work,
+      home repairs, pressure washing, yard cleanup, and property maintenance.
     </p>
   </section>
 

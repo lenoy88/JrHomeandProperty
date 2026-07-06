@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | JRHomeandProperty</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, navy, #1c1c1c);
+      color: silver;
+      text-align: center;
+    }
+
+    header {
+      background: #001f3f;
+      padding: 25px;
+      border-bottom: 4px solid silver;
+    }
+
+    h1 {
+      color: silver;
+      font-size: 40px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: silver;
+      color: navy;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 3px solid silver;
+      border-radius: 15px;
+      padding: 15px;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid silver;
+    }
+
+    .gallery-card h2 {
+      color: white;
+      margin-top: 12px;
+      font-size: 24px;
+    }
+
+    .gallery-card p {
+      color: silver;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>JRHomeandProperty Gallery</h1>
+    <a href="index.html" class="back-btn">Back Home</a>
+  </header>
+
+  <section class="gallery-grid">
+
+    <div class="gallery-card">
+      <img src="yard6.jpg" alt="Yard cleanup service">
+      <h2>Yard Cleanup</h2>
+      <p>Outdoor cleanup, grass care, and property maintenance.</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="house.jpg" alt="Home and property service">
+      <h2>Home & Property Care</h2>
+      <p>Reliable home and property service work.</p>
+    </div>
+
+  </section>
+
+</body>
+</html>
